@@ -1,48 +1,88 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Fixed 'left' to 'flex-start' */
-    min-height: 100vh;
-}
-
+/* General container styling */
 .container {
-    width: 90%;
-    max-width: 800px;
-    background: white;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.8;
+  color: #2c2c2c;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #1a237e;
+  border-bottom: 3px solid #3949ab;
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #283593;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Lists */
+ul {
+  margin: 15px 0 20px 20px;
+  padding-left: 15px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 15px;
+}
+
+ul li::before {
+  content: "•";
+  color: #3949ab;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Contact section */
+.container ul:last-of-type li {
+  font-weight: 600;
+  color: #1a237e;
+}
+
+/* Strong emphasis */
+strong {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+  }
 
-h1, h2 {
-    color: #222;
-    text-align: center;
-}
+  h1 {
+    font-size: 2rem;
+  }
 
-p, ul {
-    line-height: 1.6;
-}
+  h2 {
+    font-size: 1.4rem;
+  }
 
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-        padding: 15px;
-    }
-    
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    p, li {
-        font-size: 0.9em;
-    }
+  p,
+  ul li {
+    font-size: 0.95rem;
+  }
 }
